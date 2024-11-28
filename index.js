@@ -5,6 +5,9 @@ import dotenv from "dotenv";
 dotenv.config();
 
 import mongoose from "mongoose";
+import router from "./Route";
+
+app.use("/", router);
 
 app.listen(process.env.PORT, () => {
   mongoose.connect(process.env.URI).then(() => {
